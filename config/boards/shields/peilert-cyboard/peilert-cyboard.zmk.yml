@@ -1,0 +1,12 @@
+file_format: "1"
+id: peilert-cyboard
+name: Peilert - Cyboard
+type: shield
+url: https://www.cyboard.digital
+requires: [pro_micro]
+exposes: []
+features:
+  - keys
+siblings:
+  - peilert-cyboard_left
+  - peilert-cyboard_right
