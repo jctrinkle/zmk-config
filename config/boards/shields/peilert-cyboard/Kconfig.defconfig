@@ -1,7 +1,7 @@
 if SHIELD_PEILERT-CYBOARD_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Peilert - Cyboard"
+	default "PeilertCyboard"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
