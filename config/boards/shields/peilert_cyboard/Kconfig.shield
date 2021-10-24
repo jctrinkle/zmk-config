@@ -1,8 +1,8 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
 
-config SHIELD_PEILERT-CYBOARD_LEFT
+config SHIELD_PEILERT_CYBOARD_LEFT
 	def_bool $(shields_list_contains,peilert_cyboard_left)
 
-config SHIELD_PEILERT-CYBOARD_RIGHT
+config SHIELD_PEILERT_CYBOARD_RIGHT
 	def_bool $(shields_list_contains,peilert_cyboard_right)
