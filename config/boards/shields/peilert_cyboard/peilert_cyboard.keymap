@@ -36,8 +36,8 @@
    &none       &kp LBKT &kp LBRC &kp LT   &kp GT   &kp GRAVE                            &none     &kp PIPE    &none     &none    &kp SEMI  &kp COLON
                                           &none    &trans  &trans &none    &none &trans &trans    &to DEFAULT
                         >;
-/*                };
-                shortcuts_layer {
+                };
+/*                shortcuts_layer {
                         bindings = <
    &to DEFAULT &trans    &kp LC(U) &kp LC(B)       &kp LC(I) &kp LG(F19)                                &kp LC(F) &kp LC(F4)  &none     &none &kp F12   &none
    &none       &kp LC(Y) &kp LC(Z) &mt LC(X) LC(C) &kp LC(V) &kp F4                                     &kp HOME  &none       &kp LC(E) &none &kp LC(S) &none
