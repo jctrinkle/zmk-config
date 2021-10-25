@@ -37,5 +37,53 @@
                                           &none    &trans  &trans &none    &none &trans &trans    &to DEFAULT
                         >;
                 };
+                shortcuts_layer {
+                        bindings = <
+   &to DEFAULT &trans    &kp LC(U) &kp LC(B)       &kp LC(I) &kp LG(F19)                                &kp LC(F) &kp LC(F4)  &none     &none &kp F12   &none
+   &none       &kp LC(Y) &kp LC(Z) &mt LC(X) LC(C) &kp LC(V) &kp F4                                     &kp HOME  &none       &kp LC(E) &none &kp LC(S) &none
+   &none       &kp LC(A) &none     &kp LC(LS(V))   &kp LA(O) &kp LG(LS(S))                              &kp END   &none       &none     &none &none     &none
+                                                   &none     &trans        &trans &none    &none &trans &trans    &to DEFAULT
+                        >;
+                };
+                ppt_layer {
+                        bindings = <
+   &to DEFAULT &kp LA(LC(LS(N0))) &kp LA(LC(LS(N1))) &none              &kp LA(LC(LS(N2))) &none                                           &none  &none       &kp LS(F3) &kp LA(LC(LS(C))) &kp LA(LC(LS(N9))) &none
+   &none       &kp LA(LC(LS(N3))) &kp LA(LC(LS(N4))) &kp LA(LC(LS(N5))) &kp LA(LC(LS(N6))) &kp F10                                         &none  &kp LC(L)   &kp LC(E)  &kp LC(R)         &none              &none
+   &none       &kp LA(LC(LS(N7))) &kp LA(LC(LS(N8))) &none              &kp LA(LC(LS(F8))) &kp LA(LC(LS(F9)))                              &none  &none       &kp LC(M)  &none             &kp LC(LS(EQUAL))  &none
+                                                                        &none              &trans             &trans &none    &none &trans &trans &to DEFAULT
+                        >;
+                };
+                ppt2_layer {
+                        bindings = <
+   &to DEFAULT &kp LA(LC(N4)) &none             &kp LC(LS(G))     &kp LC(G)       &kp LA(LC(N5))                                &kp LA(LC(N1)) &kp LA(LC(N0))     &kp LA(LC(LS(F7))) &kp LA(LC(LS(C)))  &none              &none
+   &none       &none          &kp LA(LC(N6))    &kp LC(LS(C))     &kp LC(LS(V))   &kp LA(LC(LS(A)))                             &none          &kp LA(LC(LS(D)))  &kp LA(LC(LS(F5))) &kp LA(LC(LS(F4))) &kp LA(LC(LS(F6))) &none
+   &none       &none          &kp LC(LS(EQUAL)) &kp LC(LS(COMMA)) &kp LC(LS(DOT)) &none                                         &none          &kp LA(LC(LS(F1))) &kp LA(LC(LS(F2))) &kp LA(LC(N2))     &none              &none
+                                                                  &none           &trans            &trans &none    &none &none &none &none
+                        >;
+                };
+                nav_layer {
+                        bindings = <
+   &none &none     &none     &none    &none &none                                &none &kp K_SCROLL_DOWN &kp UP    &kp K_SCROLL_UP &kp PG_UP &none
+   &none &kp LCTRL &kp LSHFT &kp LALT &none &none                                &none &kp LEFT          &kp DOWN  &kp RIGHT       &kp PG_DN &none
+   &none &none     &none     &none    &none &none                                &none &kp LC(L)         &kp LC(D) &kp LC(R)       &none     &none
+                                      &none &trans &trans &none    &none &kp RET &kp SPACE &to DEFAULT
+                        >;
+                };
+                numpad_layer {
+                        bindings = <
+   &to DEFAULT &none &none &none &kp DLLR &kp PRCNT                               &kp EQUAL &kp N7 &kp N8 &kp N9 &kp MINUS &none
+   &none       &none &none &none &none    &none                                   &kp STAR  &kp N4 &kp N5 &kp N6 &kp FSLSH &none
+   &none       &none &none &none &none    &none                                   &kp PLUS  &kp N1 &kp N2 &kp N3 &kp DOT   &kp COLON
+                                 &none    &trans    &trans &none    &none &kp RET &kp SPACE &kp N0
+                        >;
+                };
+                excel_layer {
+                        bindings = <
+   &to DEFAULT &kp F2     &none &kp LC(LS(N5)) &none         &kp LA(LC(V))                            &kp LC(LS(MINUS)) &kp LC(LBKT)  &kp LC(RBKT) &none &none &none
+   &none       &none      &none &none          &none         &none                                    &none             &kp LC(MINUS) &kp F4       &none &none &none
+   &none       &kp LS(F2) &none &none          &kp LC(LS(L)) &kp F11                                  &kp LC(LS(N7))    &none         &none        &none &none &none 
+                                               &none         &none         &none &none    &none &none &none             &none
+                        >;
+                };
         };
 };
