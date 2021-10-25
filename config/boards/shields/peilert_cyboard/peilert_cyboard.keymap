@@ -77,7 +77,7 @@
                                  &none    &trans    &trans &none    &none &kp RET &kp SPACE &kp N0
                         >;
                 };
-/*                excel_layer {
+                excel_layer {
                         bindings = <
    &to DEFAULT &kp F2     &none &kp LC(LS(N5)) &none         &kp LA(LC(V))                            &kp LC(LS(MINUS)) &kp LC(LBKT)  &kp LC(RBKT) &none &none &none
    &none       &none      &none &none          &none         &none                                    &none             &kp LC(MINUS) &kp F4       &none &none &none
@@ -85,5 +85,5 @@
                                                &none         &none         &none &none    &none &none &none             &none
                         >;
                 };
-*/        };
+        };
 };
