@@ -45,7 +45,7 @@
                                                    &none     &trans        &trans &none    &none &trans &trans    &to DEFAULT
                         >;
                 };
-/*                ppt_layer {
+                ppt_layer {
                         bindings = <
    &to DEFAULT &kp LA(LC(LS(N0))) &kp LA(LC(LS(N1))) &none              &kp LA(LC(LS(N2))) &none                                           &none  &none       &kp LS(F3) &kp LA(LC(LS(C))) &kp LA(LC(LS(N9))) &none
    &none       &kp LA(LC(LS(N3))) &kp LA(LC(LS(N4))) &kp LA(LC(LS(N5))) &kp LA(LC(LS(N6))) &kp F10                                         &none  &kp LC(L)   &kp LC(E)  &kp LC(R)         &none              &none
@@ -53,7 +53,7 @@
                                                                         &none              &trans             &trans &none    &none &trans &trans &to DEFAULT
                         >;
                 };
-                ppt2_layer {
+/*                ppt2_layer {
                         bindings = <
    &to DEFAULT &kp LA(LC(N4)) &none             &kp LC(LS(G))     &kp LC(G)       &kp LA(LC(N5))                                &kp LA(LC(N1)) &kp LA(LC(N0))     &kp LA(LC(LS(F7))) &kp LA(LC(LS(C)))  &none              &none
    &none       &none          &kp LA(LC(N6))    &kp LC(LS(C))     &kp LC(LS(V))   &kp LA(LC(LS(A)))                             &none          &kp LA(LC(LS(D)))  &kp LA(LC(LS(F5))) &kp LA(LC(LS(F4))) &kp LA(LC(LS(F6))) &none
