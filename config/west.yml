@@ -1,6 +1,6 @@
 manifest:
   remotes:
-    - name: zmkfirmware
+    - name: zmk-macros-nice_nano_v2 
       url-base: https://github.com/RealET
   projects:
     - name: zmk-macros-nice_nano_v2
