@@ -1,13 +1,11 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: okke-formsma
-      url-base: https://github.com/okke-formsma
+      url-base: https://github.com/RealET
   projects:
-    - name: zmk
-      remote: okke-formsma
-      revision: macros
+    - name: zmk-macros-nice_nano_v2
+      remote: RealET
+      revision: main
       import: app/west.yml
   self:
     path: config
