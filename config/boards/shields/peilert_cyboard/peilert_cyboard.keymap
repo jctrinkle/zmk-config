@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
 #define SYMBOLS 1
@@ -16,6 +17,7 @@
 #define NAV 5
 #define NUMPAD 6
 #define EXCEL 7
+#define KEYBOARD 8
 
 / {
         keymap {
@@ -39,9 +41,9 @@
                 };
                 shortcuts_layer {
                         bindings = <
-   &to DEFAULT &trans    &kp LC(U) &kp LC(B)       &kp LC(I) &kp LG(F19)                                &kp LC(F) &kp LC(F4)  &none     &none &kp F12   &none
-   &none       &kp LC(Y) &kp LC(Z) &mt LC(X) LC(C) &kp LC(V) &kp F4                                     &kp HOME  &none       &kp LC(E) &none &kp LC(S) &none
-   &none       &kp LC(A) &none     &kp LC(LS(V))   &kp LA(O) &kp LG(LS(S))                              &kp END   &none       &none     &none &none     &none
+   &to DEFAULT  &trans    &kp LC(U) &kp LC(B)       &kp LC(I) &kp LG(F19)                                &kp LC(F) &kp LC(F4)  &none     &none &kp F12   &none
+   &none        &kp LC(Y) &kp LC(Z) &mt LC(X) LC(C) &kp LC(V) &kp F4                                     &kp HOME  &none       &kp LC(E) &none &kp LC(S) &none
+   &to KEYBOARD &kp LC(A) &none     &kp LC(LS(V))   &kp LA(O) &kp LG(LS(S))                              &kp END   &none       &none     &none &none     &to KEYBOARD
                                                    &none     &trans        &trans &none    &none &trans &trans    &to DEFAULT
                         >;
                 };
@@ -83,6 +85,14 @@
    &none       &none      &none &none          &none         &none                                    &none             &kp LC(MINUS) &kp F4       &none &none &none
    &none       &kp LS(F2) &none &none          &kp LC(LS(L)) &kp F11                                  &kp LC(LS(N7))    &none         &none        &none &none &none 
                                                &none         &none         &none &none    &none &none &none             &none
+                        >;
+                };
+                keyboard_layer {
+                        bindings = <
+   &to DEFAULT &none        &none        &reset       &none        &bootloader                                                         &bootloader &none &reset &none &none &to DEFAULT
+   &none       &bt BT_CLR   &none        &none        &none        &none                                                               &none       &none &none  &none &none &none
+   &none       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                                                        &none       &none &none  &none &none &none 
+                                                      &none        &none        &out OUT_USB &out OUT_BLE    &out OUT_BLE &out OUT_USB &none       &none
                         >;
                 };
         };
