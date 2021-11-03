@@ -21,9 +21,9 @@
 
 / {
         behaviors {
-                macro_1: bkt_mac {
+                bkt_mac: bkt_mac {
 			                    compatible = "zmk,behavior-macro";
-			                    label = "MACRO_1";
+			                    label = "BKT_MAC";
 			                    #binding-cells = <0>;
 			                    bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
 		            };
