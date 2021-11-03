@@ -20,12 +20,21 @@
 #define KEYBOARD 8
 
 / {
+        behaviors {
+                macro_1: macro_1 {
+			                    compatible = "zmk,behavior-macro";
+			                    label = "MACRO_1";
+			                    #binding-cells = <0>;
+			                    bindings = <&kp A>, <&kp B>;
+		            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                         bindings = <
-   &kp ESC &kp F2 &to NUMPAD &to SYMBOLS &kp P        &kp Y                                           &bt BT_CLR   &kp G        &kp C        &kp R        &kp MINUS    &kp EQUAL
+   &kp ESC &kp F2 &to NUMPAD &to SYMBOLS &kp P        &kp Y                                           &bt BT_CLR   &macro_1        &kp C        &kp R        &kp MINUS    &kp EQUAL
    &kp TAB &kp A  &kp O      &kp E       &kp I        &kp U                                           &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp RALT
    &kp DEL &kp Z  &kp Q      &kp J       &kp L        &kp X                                           &kp B        &kp M        &kp W        &kp V        &kp K        &kp K_APP
                                          &to SHORTCT1 &kp BSPC &kp LSHFT &to PPT    &to EXCEL &kp RET &kp SPACE &to SHORTCT1
