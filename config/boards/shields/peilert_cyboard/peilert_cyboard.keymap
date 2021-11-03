@@ -39,6 +39,18 @@
 			                    #binding-cells = <0>;
 			                    bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
 		            };
+		            ins_link: ins_link {
+			                    compatible = "zmk,behavior-macro";
+			                    label = "INS_LINK";
+			                    #binding-cells = <0>;
+			                    bindings = <&kp LC(K)>, <&kp LC(V)>, <&kp RET>;
+		            };
+		            highlight: highlight {
+			                    compatible = "zmk,behavior-macro";
+			                    label = "HIGHLIGHT";
+			                    #binding-cells = <0>;
+			                    bindings = <&kp RALT>, <&kp H>, <&kp T>, <&kp C>, <&kp RET>;
+		            };
         };
 
         keymap {
@@ -54,17 +66,17 @@
                 };
                 symbols_layer {
                         bindings = <
-   &to DEFAULT &none    &kp BSLH &kp FSLH &kp DQT  &none                                &kp EQUAL &kp AMPS    &kp LPAR  &kp RPAR &kp MINUS &none
-   &none       &kp EXCL &kp AT   &kp HASH &par_mac &kp CARET                            &none     &kp SQT     &kp COMMA &kp DOT  &kp QMARK &none
-   &none       &bkt_mac &brc_mac &kp LT   &kp GT   &kp GRAVE                            &par_mac  &kp PIPE    &bkt_mac  &brc_mac &kp SEMI  &kp COLON
+   &to DEFAULT &none    &kp BSLH &kp FSLH &kp DQT  &none                                &kp EQUAL &kp AMPS &kp LPAR  &kp RPAR &kp MINUS &none
+   &none       &kp EXCL &kp AT   &kp HASH &par_mac &kp CARET                            &none     &kp SQT  &kp COMMA &kp DOT  &kp QMARK &none
+   &none       &bkt_mac &brc_mac &kp LT   &kp GT   &kp GRAVE                            &none     &kp PIPE &none     &none    &kp SEMI  &kp COLON
                                           &none    &trans  &trans &none    &none &trans &trans    &to DEFAULT
                         >;
                 };
                 shortcuts_layer {
                         bindings = <
-   &to DEFAULT  &trans    &kp LC(U) &kp LC(B)       &kp LC(I) &kp LG(F19)                                &kp LC(F) &kp LC(F4)  &none     &none &kp F12   &none
-   &none        &kp LC(Y) &kp LC(Z) &mt LC(X) LC(C) &kp LC(V) &kp F4                                     &kp HOME  &none       &kp LC(E) &none &kp LC(S) &none
-   &to KEYBOARD &kp LC(A) &none     &kp LC(LS(V))   &kp LA(O) &kp LG(LS(S))                              &kp END   &none       &none     &none &none     &to KEYBOARD
+   &to DEFAULT  &trans    &kp LC(U) &kp LC(B)       &kp LC(I) &kp LG(F19)                                &kp LC(F) &kp LC(F4) &highlight &none    &kp F12   &none
+   &none        &kp LC(Y) &kp LC(Z) &mt LC(X) LC(C) &kp LC(V) &kp F4                                     &kp HOME  &none      &kp LC(E)  &none    &kp LC(S) &none
+   &to KEYBOARD &kp LC(A) &ins_link &kp LC(LS(V))   &kp LA(O) &kp LG(LS(S))                              &kp END   &par_mac   &bkt_mac   &brc_mac &ins_link &to KEYBOARD //macros don't belong in this row.  just for testing with right hand only.
                                                    &none     &trans        &trans &none    &none &trans &trans    &to DEFAULT
                         >;
                 };
