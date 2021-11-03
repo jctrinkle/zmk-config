@@ -21,11 +21,11 @@
 
 / {
         behaviors {
-                macro_1: macro_1 {
+                macro_1: bkt_mac {
 			                    compatible = "zmk,behavior-macro";
 			                    label = "MACRO_1";
 			                    #binding-cells = <0>;
-			                    bindings = <&kp A>, <&kp B>;
+			                    bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
 		            };
         };
 
@@ -44,7 +44,7 @@
                         bindings = <
    &to DEFAULT &none    &kp BSLH &kp FSLH &kp DQT  &none                                &kp EQUAL &kp AMPS    &kp LPAR  &kp RPAR &kp MINUS &none
    &none       &kp EXCL &kp AT   &kp HASH &kp LPAR &kp CARET                            &none     &kp SQT     &kp COMMA &kp DOT  &kp QMARK &none
-   &none       &kp LBKT &kp LBRC &kp LT   &kp GT   &kp GRAVE                            &none     &kp PIPE    &none     &none    &kp SEMI  &kp COLON
+   &none       &bkt_mac &kp LBRC &kp LT   &kp GT   &kp GRAVE                            &none     &kp PIPE    &bkt_mac  &none    &kp SEMI  &kp COLON
                                           &none    &trans  &trans &none    &none &trans &trans    &to DEFAULT
                         >;
                 };
