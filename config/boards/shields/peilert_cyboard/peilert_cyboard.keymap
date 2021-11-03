@@ -27,6 +27,18 @@
 			                    #binding-cells = <0>;
 			                    bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
 		            };
+		            brc_mac: brc_mac {
+			                    compatible = "zmk,behavior-macro";
+			                    label = "BRC_MAC";
+			                    #binding-cells = <0>;
+			                    bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
+		            };
+		            par_mac: par_mac {
+			                    compatible = "zmk,behavior-macro";
+			                    label = "PAR_MAC";
+			                    #binding-cells = <0>;
+			                    bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
+		            };
         };
 
         keymap {
@@ -43,8 +55,8 @@
                 symbols_layer {
                         bindings = <
    &to DEFAULT &none    &kp BSLH &kp FSLH &kp DQT  &none                                &kp EQUAL &kp AMPS    &kp LPAR  &kp RPAR &kp MINUS &none
-   &none       &kp EXCL &kp AT   &kp HASH &kp LPAR &kp CARET                            &none     &kp SQT     &kp COMMA &kp DOT  &kp QMARK &none
-   &none       &bkt_mac &kp LBRC &kp LT   &kp GT   &kp GRAVE                            &none     &kp PIPE    &none     &none    &kp SEMI  &kp COLON
+   &none       &kp EXCL &kp AT   &kp HASH &par_mac &kp CARET                            &none     &kp SQT     &kp COMMA &kp DOT  &kp QMARK &none
+   &none       &bkt_mac &brc_mac &kp LT   &kp GT   &kp GRAVE                            &par_mac  &kp PIPE    &bkt_mac  &brc_mac &kp SEMI  &kp COLON
                                           &none    &trans  &trans &none    &none &trans &trans    &to DEFAULT
                         >;
                 };
@@ -52,7 +64,7 @@
                         bindings = <
    &to DEFAULT  &trans    &kp LC(U) &kp LC(B)       &kp LC(I) &kp LG(F19)                                &kp LC(F) &kp LC(F4)  &none     &none &kp F12   &none
    &none        &kp LC(Y) &kp LC(Z) &mt LC(X) LC(C) &kp LC(V) &kp F4                                     &kp HOME  &none       &kp LC(E) &none &kp LC(S) &none
-   &to KEYBOARD &kp LC(A) &none     &kp LC(LS(V))   &kp LA(O) &kp LG(LS(S))                              &kp END   &none       &bkt_mac  &none &none     &to KEYBOARD
+   &to KEYBOARD &kp LC(A) &none     &kp LC(LS(V))   &kp LA(O) &kp LG(LS(S))                              &kp END   &none       &none     &none &none     &to KEYBOARD
                                                    &none     &trans        &trans &none    &none &trans &trans    &to DEFAULT
                         >;
                 };
