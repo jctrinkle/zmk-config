@@ -17,7 +17,7 @@
 #define NAV 5
 #define NUMPAD 6
 #define EXCEL 7
-#define KEYBOARD 8
+#define CYBOARD 8
 
 / {
         behaviors {
@@ -76,7 +76,7 @@
                         bindings = <
    &to DEFAULT  &trans    &kp LC(U) &kp LC(B)       &kp LC(I) &kp LG(F19)                                &kp LC(F) &kp LC(F4) &highlight &none    &kp F12   &none
    &none        &kp LC(Y) &kp LC(Z) &mt LC(X) LC(C) &kp LC(V) &kp F4                                     &kp HOME  &none      &kp LC(E)  &none    &kp LC(S) &none
-   &to KEYBOARD &kp LC(A) &ins_link &kp LC(LS(V))   &kp LA(O) &kp LG(LS(S))                              &kp END   &par_mac   &bkt_mac   &brc_mac &ins_link &to KEYBOARD //macros don't belong in this row.  just for testing with right hand only.
+   &to CYBOARD &kp LC(A) &ins_link &kp LC(LS(V))   &kp LA(O) &kp LG(LS(S))                              &kp END   &par_mac   &bkt_mac   &brc_mac &ins_link &to CYBOARD //macros don't belong in this row.  just for testing with right hand only.
                                                    &none     &trans        &trans &none    &none &trans &trans    &to DEFAULT
                         >;
                 };
@@ -120,7 +120,7 @@
                                                &none         &none         &none &none    &none &none &none             &none
                         >;
                 };
-                keyboard_layer {
+                cyboard_layer {
                         bindings = <
    &to DEFAULT &none        &none        &reset       &none        &bootloader                                                         &bootloader &none &reset &none &none &to DEFAULT
    &none       &bt BT_CLR   &none        &none        &none        &none                                                               &none       &none &none  &none &none &none
