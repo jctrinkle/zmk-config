@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: Cyboard-DigitalTailor
-      revision: master
+      revision: main
       import: app/west.yml
   self:
     path: config
