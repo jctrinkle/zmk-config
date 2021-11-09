@@ -5,9 +5,9 @@ Your Cyboard should arrive with some charge in the batteries, and ready to pair.
 3. If the battery wasn't dead, then the board may need to be reset. To reset, press the following sequence of keys on the left hand:
    1. Shortcut (A) + Cyboard (B) *(This accesses the "Cyboard" layer, which is used for bluetooth control, updating your keymap firmware, and troubleshooting.)*
    2. Reset (C) *(You can confirm that the reset occured by looking for 2 quick blue flashes in the USB port immediately after pressing reset.)*
-  `|   |   |   | C |   |   |
-   | B |   |   |   |   |   |
-   |   |   |   |   |   |   |
-                   | A |   |   |   |
+  `|   |   |   | C |   |   |\
+   | B |   |   |   |   |   |\
+   |   |   |   |   |   |   |\
+   left hand       | A |   |   |   |
   `
 https://zmk.dev/docs
