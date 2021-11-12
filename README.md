@@ -1,12 +1,8 @@
-# Setting up your Cyboard
-Your Cyboard should arrive with some charge in the batteries, and ready to pair.
-1. Turn on bluetooth on the device you wish to pair with your Cyboard. It should be visible as "Peilert Cyboard." If pairing is successful and both hands are registering keypresses, you're done! If not, contact customer support at (+1) 518.813.0122 or erik.trinkle@cyboard.digital. You can also try some of the troubleshooting below.
-2. If your Cyboard does not appear in the list of available devices, the battery may be dead. Try connecting the left half to your device via USB. A faint orange glow should be visible inside the USB-C port on your Cyboard, indicating that the battery is charging. If the battery was dead, your "Peilert Cyboard" should now be visible in your bluetooth device list.
-3. If the battery wasn't dead, then the board may need to be reset. To reset, press the following sequence of keys on the left hand:
-   1. Shortcut (A) + Cyboard (B) *(This accesses the "Cyboard" layer, which is used for bluetooth control, updating your keymap firmware, and troubleshooting.)*
-   2. Reset (C) *(You can confirm that the reset occured by looking for 2 quick blue flashes in the USB port immediately after pressing reset.)*  
-      |   |   |   | C |   |   |  
-      | B |   |   |   |   |   |  
-      |   |   |   |   |   |   |  
-      left hand       | A |   |   |   |  
-https://zmk.dev/docs
+# Changing your Keymap in ZMK
+1. Make the desired edits to your [peilert_cyboard.keymap file](config/boards/shields/peilert_cyboard/peilert_cyboard.keymap) and commit them.
+2. GitHub will automatically run an Action to build your firmware. this takes approximately 2 minutes for most changes.
+3. Once the Action is successful, there will be a firmware "artifact" in the Action which you can download and unzip.
+4. Connect the left (central) half of your Cyboard to your computer via USB.
+5. Put your Cyboard in bootloader mode.
+6. Copy the .uf2 file into the USB device named Nice Nano.
+7. You're done! You can now disconnect your Cyboard from your computer.
