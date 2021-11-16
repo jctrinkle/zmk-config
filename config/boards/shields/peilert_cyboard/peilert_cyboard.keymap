@@ -11,11 +11,10 @@
 
 #define DEFAULT 0
 #define SYMBOLS 1
-#define SHORTCT1 2
-#define NAV 3
-#define NUMPAD 4
-#define CYBOARD 5
-#define LOCK 6
+#define NAV 2
+#define NUMPAD 3
+#define CYBOARD 4
+#define LOCK 5
 
 / {
 
@@ -36,6 +35,11 @@
                           timeout-ms = <50>;
                           key-positions = <6 11 40>;
                           bindings = <&tog LOCK>;
+                };
+                combo_cyboard {
+                          timeout-ms = <50>;
+                          key-positions = <1 2 3 4 37>;
+                          bindings = <&tog CYBOARD>;
                 };
         };
 
@@ -60,235 +64,50 @@
 			                    #binding-cells = <0>;
 			                    bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
 		            };
-
-		            //shortcuts layer macros
-		            ins_link: ins_link {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "INS_LINK";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp LC(K)>, <&kp LC(V)>, <&kp RET>;
-		            };
-		            highlight: highlight {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "HIGHLIGHT";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp T>, <&kp C>, <&kp RET>;
-		            };
-
-		            //ppt layer macros
-                txt_black: txt_black {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "TXT_BLACK";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp LA(H)>, <&kp F>, <&kp C>, <&kp RIGHT>, <&kp RET>;
-		            };
-		            text_top: text_top {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "TEXT_TOP";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp A>, <&kp T>, <&kp T>;
-		            };
-		            ins_txt_bx: ins_txt_bx {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "INS_TXT_BX";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp LA(N)>, <&kp X>;
-		            };
-		            incr_indnt: incr_indnt {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "INCR_INDNT";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp A>, <&kp I>;
-		            };
-		            spcng_optn: spcng_optn {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "SPCNG_OPTN";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp K>, <&kp L>;
-		            };
-		            dec_indnt: dec_indnt {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "DEC_INDNT";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp A>, <&kp O>;
-		            };
-
-		            //ppt_2 layer macros
-		            clear_fill: clear_fill {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "CLEAR_FILL";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp S>, <&kp F>, <&kp N>;
-		            };
-		            txt_white: txt_white {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "TXT_WHITE";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp LA(H)>, <&kp F>, <&kp C>, <&kp RET>;
-		            };
-		            slct_trnsp: slct_trnsp {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "SLCT_TRNSP";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp LA(J)>, <&kp P>, <&kp I>, <&kp S>;
-		            };
-
-		            //excel layer macros
-		            rname_wkst: rname_wkst {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "RNAME_WKST";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp O>, <&kp H>, <&kp R>;
-		            };
-		            number_fmt: number_fmt {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "NUMBER_FMT";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp K>, <&kp LA(H)>, <&kp 9>;
-		            };
-		            incr_decml: incr_decml {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "INCR_DECML";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp O>;
-		            };
-		            decr_decml: decr_decml {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "DECR_DECML";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp 9>;
-		            };
-		            paste_frmt: paste_frmt {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "PASTE_FRMT";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp LA(LC(V))>, <&kp T>;
-		            };
-		            paste_vals: paste_vals {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "PASTE_VALS";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp LA(LC(V))>, <&kp V>;
-		            };
-		            paste_frml: paste_frml {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "PASTE_FRML";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp LA(LC(V))>, <&kp F>;
-		            };
-		            cstm_fmt: cstm_fmt {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "CSTM_FMT";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp J>;
-		            };
-                freze_pane: freze_pane {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "FREZE_PANE";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp W>, <&kp F>, <&kp F>;
-		            };
-                ins_column: ins_column {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "INS_COLUMN";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp I>, <&kp C>;
-		            };
-                ins_row: ins_row {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "INS_ROW";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp I>, <&kp R>;
-		            };
-                clear_all: clear_all {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "CLEAR_ALL";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp LC(LS(MINUS))>, <&kp RALT>, <&kp H>, <&kp H>, <&kp RET>;
-		            };
-                autofit_w: autofit_w {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "AUTOFIT_W";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp O>, <&kp I>;
-		            };
-                fill_color: fill_color {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "FILL_COLOR";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp F>, <&kp C>;
-		            };
-                rght_brdr: rght_brdr {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "RGHT_BRDR";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp B>, <&kp R>;
-		            };
-                left_brdr: left_brdr {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "LEFT_BRDR";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp B>, <&kp L>;
-		            };
-		            top_brdr: top_brdr {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "TOP_BRDR";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp B>, <&kp T>;
-		            };
-		            bttm_brdr: bttm_brdr {
-			                    compatible = "zmk,behavior-macro";
-			                    label = "BTTM_BRDR";
-			                    #binding-cells = <0>;
-			                    bindings = <&kp RALT>, <&kp H>, <&kp B>, <&kp O>;
-		            };
         };
+
+//make i3 commands easier
+//add single bracket support
+//haskell layer?
+//access to DEL
+//pipe
 
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R    &kp T                                                     &kp Y   &kp U       &kp I        &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F    &kp G                                                     &kp H   &kp J       &kp K        &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V    &kp B                                                     &kp N   &kp M       &kp COMMA    &kp DOT &kp FSLH &kp ESC
-                               &kp LGUI &sl NUMPAD &kp RET &sl SHORTCT1    &sl SHORTCT1 &kp SPACE &sl NAV &sl SYMBOLS
+   &kp TAB   &kp Q &kp W &kp E &kp R    &kp T                                                 &kp Y      &kp U   &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D &kp F    &kp G                                                 &kp H      &kp J   &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V    &kp B                                                 &kp N      &kp M   &kp COMMA &kp DOT &kp FSLH &kp ESC
+                               &kp LGUI &kp LALT &kp RET &sl SYMBOLS    &sl SYMBOLS &kp SPACE &sl NUMPAD &sl NAV
                         >;
                 };
 
                 symbols_layer {
                         bindings = <
-   &to DEFAULT &none    &kp BSLH &kp FSLH &kp DQT  &none                                &kp EQUAL &kp AMPS &kp LPAR  &kp RPAR &kp MINUS &none
-   &none       &kp EXCL &kp AT   &kp HASH &par_mac &kp CARET                            &none     &kp SQT  &kp COMMA &kp DOT  &kp QMARK &none
-   &none       &bkt_mac &brc_mac &kp LT   &kp GT   &kp GRAVE                            &none     &kp PIPE &none     &none    &kp SEMI  &kp COLON
+   &to DEFAULT &none    &kp BSLH &kp FSLH &kp DQT  &none                                &kp EQUAL &kp AMPS &kp LPAR &kp RPAR &kp MINUS &kp DEL
+   &none       &kp EXCL &kp AT   &kp HASH &par_mac &kp CARET                            &none     &kp SQT  &kp LBKT &kp RBKT &none     &none
+   &none       &bkt_mac &brc_mac &kp LT   &kp GT   &kp GRAVE                            &none     &kp PIPE &kp LBRC &kp RBRC &none     &none
                                           &none    &trans  &trans &none    &none &trans &trans    &to DEFAULT
-                        >;
-                };
-
-                shortcuts_layer {
-                        bindings = <
-   &to DEFAULT  &trans    &kp LC(U) &kp LC(B)       &kp LC(I) &kp LG(F19)                                &kp LC(F) &kp LC(F4) &highlight &none &kp F12   &none
-   &none        &kp LC(Y) &kp LC(Z) &mt LC(X) LC(C) &kp LC(V) &kp F4                                     &kp HOME  &none      &kp LC(E)  &none &kp LC(S) &none
-   &to CYBOARD  &kp LC(A) &ins_link &kp LC(LS(V))   &kp LA(O) &kp LG(LS(S))                              &kp END   &none      &none      &none &none     &to CYBOARD
-                                                   &none     &trans        &trans &none    &none &trans &trans    &to DEFAULT
                         >;
                 };
 
                 nav_layer {
                         bindings = <
-   &none &none     &none     &none    &none &none                                &none &kp K_SCROLL_DOWN &kp UP    &kp K_SCROLL_UP &kp PG_UP &none
-   &none &kp LCTRL &kp LSHFT &kp LALT &none &none                                &none &kp LEFT          &kp DOWN  &kp RIGHT       &kp PG_DN &none
-   &none &none     &none     &none    &none &none                                &none &kp LC(L)         &kp LC(D) &kp LC(R)       &none     &none
-                                      &none &trans &trans &none    &none &kp RET &kp SPACE &to DEFAULT
+   &none &none     &none     &none    &none &none                              &none &kp HOME &kp UP   &kp END   &kp PG_UP &none
+   &none &kp LCTRL &kp LSHFT &kp LALT &none &none                              &none &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &none
+   &none &none     &none     &none    &none &none                              &none &none    &none    &none     &none     &none
+                                      &none &trans &trans &none    &none &none &none &none
                         >;
                 };
 
                 numpad_layer {
                         bindings = <
-   &to DEFAULT &none &none &none &kp DLLR &kp PRCNT                               &kp EQUAL &kp N7 &kp N8 &kp N9 &kp MINUS &none
-   &none       &none &none &none &none    &none                                   &kp STAR  &kp N4 &kp N5 &kp N6 &kp FSLH  &none
-   &none       &none &none &none &none    &none                                   &kp PLUS  &kp N1 &kp N2 &kp N3 &kp DOT   &kp COLON
-                                 &none    &trans    &trans &none    &none &kp RET &kp SPACE &kp N0
+   &none &none &none &none &kp DLLR &kp PRCNT                               &kp EQUAL &kp N7 &kp N8 &kp N9 &kp MINUS &trans
+   &none &none &none &none &none    &none                                   &kp STAR  &kp N4 &kp N5 &kp N6 &kp FSLH  &none
+   &none &none &none &none &none    &none                                   &kp PLUS  &kp N1 &kp N2 &kp N3 &kp DOT   &kp COLON
+                           &none    &trans    &trans &none    &none &none &none &kp N0
                         >;
                 };
 
