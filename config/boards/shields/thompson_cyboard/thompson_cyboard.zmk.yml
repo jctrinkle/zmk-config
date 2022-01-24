@@ -1,0 +1,12 @@
+file_format: "1"
+id: thompson_cyboard
+name: Thompson Cyboard
+type: shield
+url: https://www.cyboard.digital
+requires: [pro_micro]
+exposes: []
+features:
+  - keys
+siblings:
+  - thompson_cyboard_left
+  - thompson_cyboard_right
