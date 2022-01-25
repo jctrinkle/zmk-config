@@ -2,11 +2,9 @@
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: Cyboard-DigitalTailor
-      url-base: https://github.com/Cyboard-DigitalTailor
   projects:
     - name: zmk
-      remote: Cyboard-DigitalTailor
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
   self:
