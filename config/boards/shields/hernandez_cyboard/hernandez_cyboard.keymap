@@ -149,8 +149,6 @@
    &kp ESC       &kp A &kp R &kp S &kp T    &kp G                                                          &kp M    &kp N   &kp E        &kp I      &kp O    AS(SQT)
    &hp LALT HOME &kp Z &kp X &kp C &kp D    &kp V                                                          &kp K    &kp H   &tpl 5 COMMA &tpl 3 DOT AS(FSLH) &hp RALT DELETE
                                    &kp F1   &hp LSHIFT SPACE &kp LGUI                        &hp LCTRL RET &kp F2   &kp F3
-                        >;
-                };
 /*
                 default__L {
                         bindings = <
