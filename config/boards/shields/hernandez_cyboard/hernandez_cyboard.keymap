@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define L__DEFAULT 0
-/*#define L__GAMING 1
+#define L__GAMING 1
 #define L__NAV__SYM 2
 #define L__WM 3
 #define L__FN__OSM 4
@@ -140,15 +140,15 @@
                         bindings = <&kp>, <&kp>;
                 };
         };
-*/
+
         keymap {
                 compatible = "zmk,keymap";
                 default__L {
                         bindings = <
-   &kp TAB       &kp Q &kp W &kp F &kp P    &kp B                                                          &kp J    &kp L   &kp U        &kp Y      &kp SEMI &kp MINUS
-   &kp ESC       &kp A &kp R &kp S &kp T    &kp G                                                          &kp M    &kp N   &kp E        &kp I      &kp O    &kp SQT
-   &kp LALT      &kp Z &kp X &kp C &kp D    &kp V                                                          &kp K    &kp H   &kp COMMA &kp DOT &kp FSLH &kp DELETE
-                                   &kp F1   &kp SPACE &kp LGUI                        &kp RET &kp F2   &kp F3
+   &kp TAB       &kp Q &kp W &kp F &kp P    &kp B                                                          &kp J    &kp L   &kp U        &kp Y      AS(SEMI) AS(MINUS)
+   &kp ESC       &kp A &kp R &kp S &kp T    &kp G                                                          &kp M    &kp N   &kp E        &kp I      &kp O    AS(SQT)
+   &hp LALT HOME &kp Z &kp X &kp C &kp D    &kp V                                                          &kp K    &kp H   &tpl 5 COMMA &tpl 3 DOT AS(FSLH) &hp RALT DELETE
+                                   &kp F1   &hp LSHIFT SPACE &kp LGUI                        &hp LCTRL RET &kp F2   &kp F3
                         >;
                 };
 /*
