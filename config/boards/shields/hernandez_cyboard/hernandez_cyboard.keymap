@@ -11,10 +11,9 @@
 
 #define DEFAULT 0
 #define SYMBOLS 1
-#define NAV 2
-#define NUMPAD 3
-#define CYBOARD 4
-#define LOCK 5
+#define NUMPAD 2
+#define CYBOARD 3
+#define LOCK 4
 
 / {
 
