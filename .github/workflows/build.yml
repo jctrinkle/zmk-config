@@ -33,29 +33,29 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Peilert Cyboard Left)
-        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=peilert_cyboard_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Peilert_Cyboard DTS File
+      - name: West Build (Jeff_Trinkle Cyboard Left)
+        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=jeff_trinkle_cyboard_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: Jeff_Trinkle_Cyboard DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano_v2.dts.pre.tmp
-      - name: Peilert_Cyboard Left Kconfig file
+      - name: Jeff_Trinkle_Cyboard Left Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 peilert_cyboard_left_nice_nano_v2.uf2
-      - name: Archive (Peilert_Cyboard Left)
+        run: cp build/zephyr/zmk.uf2 jeff_trinkle_cyboard_left_nice_nano_v2.uf2
+      - name: Archive (Jeff_Trinkle_Cyboard Left)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: peilert_cyboard_left_nice_nano_v2.uf2
-      - name: West Build (Peilert_Cyboard Right)
-        run: west build --pristine -s zmk/app -b nice_nano_v2 -- -DSHIELD=peilert_cyboard_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          path: jeff_trinkle_cyboard_left_nice_nano_v2.uf2
+      - name: West Build (Jeff_Trinkle_Cyboard Right)
+        run: west build --pristine -s zmk/app -b nice_nano_v2 -- -DSHIELD=jeff_trinkle_cyboard_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
 
-      - name: Peilert_Cyboard Right Kconfig file
+      - name: Jeff_Trinkle_Cyboard Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 peilert_cyboard_right_nice_nano_v2.uf2
-      - name: Archive (Peilert_Cyboard Right)
+        run: cp build/zephyr/zmk.uf2 jeff_trinkle_cyboard_right_nice_nano_v2.uf2
+      - name: Archive (Jeff_Trinkle_Cyboard Right)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: peilert_cyboard_right_nice_nano_v2.uf2
+          path: jeff_trinkle_cyboard_right_nice_nano_v2.uf2
