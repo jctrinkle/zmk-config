@@ -46,7 +46,10 @@
                           bindings = <&tog CYBOARD>;
                 };
         };
-
+/*
+ * JCT: clear bt profile on keyboard: (1) forget cyboard in windows, (2) clear bt on keyboard (press ...
+ * F3,F4,F5 together, press escape, press F3,F4,F5 together), (3) repair as bt device on windows
+ */
         keymap {
                 compatible = "zmk,keymap";
 
